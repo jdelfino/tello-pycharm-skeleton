@@ -14,7 +14,7 @@ async def main():
         await drone.move_up(50)
         await drone.move_forward(100)
         await asyncio.sleep(5) # Pauses for 5 seconds
-        await drone.go_to(Vector(0, 0, 40), 20, 4)
+        await drone.go_to(relative_position=Vector(0, 0, 40), speed=20, mission_pad=4)
         await asyncio.sleep(5)
 
         await drone.land()
